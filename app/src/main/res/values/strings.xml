@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">3Laun</string>
+    <string name="proj_code_name">Project Red Kangaroo</string>
+    <string name="main_greeting">Welcome to "</string>
+    <string name="no_cnxn">No active inputs detected.</string>
+    <string name="inputs_hdr">Available sources:</string>
+    <string name="hdmi1">HDMI #1</string>
+    <string name="hdmi2">HDMI #2</string>
+    <string name="hdmi3">HDMI #3</string>
+    <string name="hdmi4">HDMI #4</string>
+
+</resources>
