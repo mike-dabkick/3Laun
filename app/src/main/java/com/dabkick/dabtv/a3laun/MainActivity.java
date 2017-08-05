@@ -1,22 +1,16 @@
 package com.dabkick.dabtv.a3laun;
 
 import android.app.Activity;
-import android.app.AlarmManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
-import static com.dabkick.dabtv.a3laun.dispdev.testlist;
+//import static com.dabkick.dabtv.a3laun.dispdev.testlist;
 
 public class MainActivity extends Activity {
 
+/*
     private Handler mHandler;
     public void useHandler() {
         mHandler = new Handler();
@@ -29,6 +23,7 @@ public class MainActivity extends Activity {
             mHandler.postDelayed(mRunnable, 500);
         }
     };
+*/
 
 
     @Override
@@ -66,7 +61,7 @@ public class MainActivity extends Activity {
             }
         });
 
-        dispdev.testlist();
+        //dispdev.testlist();
     }
 
     @Override
@@ -74,6 +69,7 @@ public class MainActivity extends Activity {
         // do nothing
     }
 
+/*
     public void scheduleAlarm() {
         Intent intent = new Intent(getApplicationContext(), alarmrecv.class);
         final PendingIntent pIntent = PendingIntent.getBroadcast(this, alarmrecv.REQUEST_CODE,
@@ -83,4 +79,5 @@ public class MainActivity extends Activity {
         alarm.setInexactRepeating(AlarmManager.RTC_WAKEUP, firstMillis,
                 AlarmManager.INTERVAL_HALF_HOUR, pIntent);
     }
+*/
 }

@@ -1,0 +1,36 @@
+without the android support v7 media or whatever lib
+i tthink the regular api at our supported level wqill be sufficient
+the
+
+TvInputManager.TvInputCallback () {
+    void onInputStateChanged(String inputId, int state) {
+        state will be one of CONNECTED, CONNECTED_STANDBY, DISCONNECTED
+    }
+}
+
+based on the ID, create or recall a button in the list displayed on the main activity screen
+is there an adapter is makes sense to use?
+
+->CONNECTED
+change state to visible if GONE
+make enabled
+ensure click action initiates fullscreen disoplay of input
+
+
+->CONNECTED_STANDBY
+change state to visible if it was GONE
+make disabled (click does nothing)
+
+->DISCONNECTED
+change visibility to GONE
+disconnect click action and disabled state are supsrfluous
+
+
+TvInputManager object is required i guess if we're making use of its exclusive callback
+
+
+TvInputService - represents TV input/source such as HDMI pass-through
+TvInputService.Session or .HardwareSession - base class to derive from
+
+TvView & TvView.TvInputCallback
+

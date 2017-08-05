@@ -31,7 +31,7 @@ public class hdmiListActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hdmi_list);
 
-        dispdev.testlist();
+        //dispdev.testlist();
         loadApps();
         loadListView();
         addClickListener();
