@@ -1,14 +1,24 @@
 package com.dabkick.dabtv.a3laun;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.media.tv.*;
+import android.media.tv.TvContract;
+import android.media.tv.TvInputInfo;
+import android.media.tv.TvInputManager;
 import android.media.tv.TvInputService;
+import android.media.tv.TvInputHardwareInfo;
+import android.net.Uri;
+import android.view.KeyEvent;
+import android.view.Surface;
 
 /**
  * Created by mike on 8/2/2017.
  */
 
-public class HDMIInputService extends android.media.tv.TVInputService {
-    public class HDMIInputService extends TvInputService
-    {
+public class HDMIInputService extends TvInputService {
 
         private int HDMI_HW_ID = 1;
         private TvInputInfo mTvInputInfo;
@@ -20,8 +30,9 @@ public class HDMIInputService extends android.media.tv.TVInputService {
         }
 
         @Override
-        public TvInputInfo onHardwareAdded(TvInputHardwareInfo hardwareInfo)
+        public TvInputInfo onHardwareAdded(android.media.tv.TvInputHardwareInfo hardwareInfo)
         {
+
             Context context = getApplicationContext();
             ResolveInfo ri = context.getPackageManager().resolveService(new Intent("android.media.tv.TvInputService"),            PackageManager.GET_INTENT_FILTERS | PackageManager.GET_META_DATA);
             mTvInputInfo = TvInputInfo.createTvInputInfo(context, ri, hardwareInfo, null, TvContract.buildChannelUriForPassthroughInput(Id));
@@ -101,5 +112,4 @@ public class HDMIInputService extends android.media.tv.TVInputService {
 
         }
 
-    }
 }
